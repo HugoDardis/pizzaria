@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Pizzaria</title>
+	<link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/pizzas.css">
+	<!-- <link rel="stylesheet" href="css/index.css"> -->
+
+</head>
+
+<body>
+	<link rel="stylesheet" href="css/index.css">
+	<form action="/pizzas/busca" method="get">
+		<input type="text" name="q" placeholder="Qual pizza você procura?" autocomplete="off" value="">
+		<button type="submit">Buscar</button>
+	</form>
+
+	<% if(pizzas.length> 0) { %>
+		<main>
+			<% for(i of pizzas) { %>
+				<article>
+					<img src="<%=i.img%>">
+					<a src="pizza.html">Ver Mais</a>
+					<button>+ Add</button>
+					<div>
+						<%=i.nome%>
+					</div>
+					<span>
+						<%=i.preco%>
+					</span>
+				</article>
+				<% } %>
+		</main>
+	<% } %>
+
+			<!--
+	<div class="pizza-nao-encontrada">Nenhuma pizza encontrada. Tente ser menos específico na sua busca.</div>
+	-->
+
+</body>
+
+</html>
