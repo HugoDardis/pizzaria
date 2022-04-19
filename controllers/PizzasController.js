@@ -8,6 +8,7 @@
     //let pizzas = require('../database/pizzas.json');
     res.render('pizzas.ejs', {pizzas: pizzas});
   },
+  
   monstrar: (req, res) => {
     //importar/achar id
     let id = req.params.id;

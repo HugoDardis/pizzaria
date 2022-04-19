@@ -11,12 +11,12 @@
 <body>
 	<link rel="stylesheet" href="css/pizza.css">
 	<main>
-		<h1><%=i.nome%>></h1>
-		<h2><%=i.preco%></h2>
-		<img src="<%=i.img%>" alt="<%i.nome%>1">
-		<div><%i.ingredientes%></div>
+		<h1><%=pizza.nome%>></h1>
+		<h2><%=pizza.preco%></h2>
+		<img src="<%=pizza.img%>" alt="<%pizza.nome%>1">
+		<div><%pizza.ingredientes%></div>
 		<button>+ Add</button>
-		<a href="pizza.html" class="prev">&lt;</a>
+		<a href="/pizzas/<%= i.id %>" class="prev">&lt;</a>
 		<a href="pizza.html" class="next">&gt;</a>
 	</main>
 </body>
